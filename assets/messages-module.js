@@ -11,7 +11,7 @@
     <div class="message-head">
       ${ambient}
       <div class="message-status"><strong class="message-clock">--:--</strong><span class="message-island"></span><span class="message-signal">▮▮ 5G ▰</span></div>
-      <div class="message-title-row"><span></span><h2>聊天</h2><button type="button" aria-label="更多选项" onclick="showHomeToast('消息设置后续建设')">···</button></div>
+      <div class="message-title-row"><span></span><h2>聊天</h2><button type="button" aria-label="消息设置" onclick="go('mySettings')">···</button></div>
       <div class="message-filters" role="group" aria-label="筛选会话">
         <button type="button" data-message-filter="unread">未读</button>
         <button type="button" data-message-filter="following">我关注的</button>
@@ -53,7 +53,9 @@
     const badge = document.getElementById('messagesUnreadCount');
     if (!badge) return;
     badge.textContent = '1';
-    badge.hidden = officialRead;
+    let settings = {};
+    try { settings = JSON.parse(localStorage.getItem('aesthetic_message_settings_v1') || '{}'); } catch (_) {}
+    badge.hidden = officialRead || settings.notifications === false || settings.official === false;
   }
   function renderMessages() {
     updateMessageClocks();
@@ -108,6 +110,7 @@
   };
   updateMessageClocks();
   updateNavBadge();
+  window.addEventListener('message-settings-changed', updateNavBadge);
   setInterval(updateMessageClocks, 15000);
   if (['messages','officialChat'].includes(location.hash.slice(1))) go(location.hash.slice(1));
 })();

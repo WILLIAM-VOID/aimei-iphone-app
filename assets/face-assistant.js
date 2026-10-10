@@ -89,10 +89,13 @@
     if(el)el.textContent=new Intl.DateTimeFormat('zh-CN',{hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(new Date());
   }
   function localProfile(){
-    const result={photoCount:0,notes:[],events:[],quiz:{}};
+    const result={photoCount:0,faceCaptureCount:0,latestFaceCaptureDate:'',notes:[],events:[],quiz:{}};
     if(!canReadRecords)return result;
     try{
       result.photoCount=Array.isArray(data.photos)?data.photos.length:0;
+      const faceCaptures=(data.photos||[]).filter(item=>item.captureType==='3d-video');
+      result.faceCaptureCount=faceCaptures.length;
+      result.latestFaceCaptureDate=faceCaptures.at(-1)?.date||'';
       result.events=Array.isArray(data.events)?data.events.slice(-2):[];
       for(const [area,items] of Object.entries(data.areas||{})){
         if(Array.isArray(items)&&items[0]?.text)result.notes.push({area,text:String(items[0].text).slice(0,90)});
@@ -114,6 +117,7 @@
     if(!canReadRecords)return '尚未获得读取档案授权，因此只提供通用信息。';
     const parts=[];
     if(profile.photoCount)parts.push(`你保存了 ${profile.photoCount} 次面部拍摄记录；这里未进行照片识别。`);
+    if(profile.faceCaptureCount)parts.push(`其中有 ${profile.faceCaptureCount} 次前置摄像头多角度记录，最近一次为 ${profile.latestFaceCaptureDate}；AI 只读取记录信息，没有读取或上传影像。`);
     const note=profile.notes.find(item=>item.area===topic.area);
     if(note)parts.push(`你曾在“${note.area}”记下：“${note.text}”。`);
     const quiz=profile.quiz[topic.area];
@@ -218,7 +222,7 @@
     const profile=localProfile();
     consentEl.hidden=liveMode;
     consentEl.querySelector('h3').textContent=canReadRecords?'已授权读取本地档案':'让回答更贴近你';
-    consentEl.querySelector('p').textContent=canReadRecords?`本地演示可读取 ${profile.photoCount} 次正式拍摄记录、部位记录与选择题；真实 AI 目前只接收本次提问，不上传档案或照片。`:'授权只供本地演示读取记录；真实 AI 目前只接收本次提问，不上传档案或照片。';
+    consentEl.querySelector('p').textContent=canReadRecords?`本地演示可读取 ${profile.photoCount} 次拍摄记录（含 ${profile.faceCaptureCount} 次多角度采集）、部位记录与选择题，仅读取记录信息，不识别影像。真实 AI 目前只接收本次提问，不上传档案、照片或视频。`:'授权只供本地演示读取记录信息，不识别影像；真实 AI 目前只接收本次提问，不上传档案、照片或视频。';
     document.getElementById('faConsentButton').textContent=canReadRecords?'撤回授权并清空聊天':'授权读取记录';
     document.getElementById('faDeclineButton').hidden=canReadRecords;
     requestAnimationFrame(()=>{scrollEl.scrollTop=scrollEl.scrollHeight});

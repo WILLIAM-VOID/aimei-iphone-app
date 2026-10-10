@@ -1,0 +1,20 @@
+.message-setting-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;border-top:1px solid var(--app-line,#eee);color:var(--app-ink,#332d35)}
+.message-setting-row span{display:block}
+.message-setting-row b,.message-font-setting b{display:block;font-size:13px}
+.message-setting-row small{display:block;color:var(--app-muted,#817986);font-size:10px;margin-top:2px}
+.message-setting-row input{appearance:none;width:42px;height:25px;flex:none;border:0;border-radius:99px;background:var(--app-line,#d8d3d9);position:relative;transition:background .2s}
+.message-setting-row input:before{content:'';position:absolute;left:3px;top:3px;width:19px;height:19px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0002;transition:transform .2s}
+.message-setting-row input:checked{background:var(--app-accent,#b75f82)}
+.message-setting-row input:checked:before{transform:translateX(17px)}
+.message-setting-row input:focus-visible,#messageFontRange:focus-visible{outline:2px solid var(--app-accent,#b75f82);outline-offset:3px}
+.message-font-setting{padding-top:14px;border-top:1px solid var(--app-line,#eee);color:var(--app-ink,#332d35)}
+.message-font-setting>div:first-child{display:flex;align-items:center;justify-content:space-between}
+.message-font-setting output{font-size:12px;color:var(--app-accent,#a74870);font-weight:800}
+#messageFontRange{width:100%;accent-color:var(--app-accent,#a74870);margin:14px 0 2px}
+.message-font-scale{display:flex;justify-content:space-between;color:var(--app-muted,#817986);font-size:10px}
+.message-font-preview{margin-top:10px;padding:11px;border-radius:12px;background:var(--app-card-alt,#f7f3f6);color:var(--app-ink,#332d35);font-size:var(--message-font-size,16px);line-height:1.5}
+.message-settings-note{margin:12px 0 0!important;font-size:10px!important;line-height:1.55;color:var(--app-muted,#817986)!important}
+.message-conversation-top b{font-size:var(--message-font-size,16px)}
+.message-conversation-copy>small{font-size:calc(var(--message-font-size,16px) * .78)}
+.chat-line p,.official-chat-compose input{font-size:var(--message-font-size,16px)!important}
+@media(prefers-reduced-motion:reduce){.message-setting-row input,.message-setting-row input:before{transition:none}}

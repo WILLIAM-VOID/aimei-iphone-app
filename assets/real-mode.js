@@ -13,7 +13,7 @@
     core.classList.toggle('real-mode',real);
     card.hidden=!real;
     const face=document.getElementById('userFace');
-    face.alt=real?'用户写实原图，不使用精修滤镜':'用户照片的柔和预览';
+    face.alt=real?'用户写实原图，不使用高帧率显示效果':'用户照片的柔和高帧率预览';
     document.getElementById('realBtn').setAttribute('aria-pressed',String(real));
     document.getElementById('polishedBtn').setAttribute('aria-pressed',String(!real));
   };
