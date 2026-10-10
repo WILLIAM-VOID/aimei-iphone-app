@@ -1,5 +1,5 @@
 /* Bump APP_BUILD when publishing a release to trigger iPhone update checks. */
-const APP_BUILD = '2026.10.10.3';
+const APP_BUILD = '2026.10.10.4';
 const CACHE_PREFIX = 'aesthetic-pwa-';
 const CACHE_NAME = `${CACHE_PREFIX}${APP_BUILD}`;
 const scopeUrl = new URL(self.registration.scope);
