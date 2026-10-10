@@ -1,0 +1,19 @@
+.pwa-install-card{border:1px solid #eadfe8;border-radius:18px;background:#fff;padding:16px;margin:12px 0;color:#30243e}
+.pwa-install-card h3{margin:0 0 6px;font-size:15px}
+.pwa-install-card p,.pwa-install-status{margin:5px 0;color:#817986;font-size:12px;line-height:1.6}
+.pwa-install-actions{display:flex;gap:8px;margin-top:12px}
+.pwa-install-actions button{border:1px solid #e7dce6;background:#fff;border-radius:12px;color:#5e4163;min-height:40px;padding:0 12px;font-size:12px;font-weight:700}
+.pwa-install-actions button.primary{border-color:#a74870;background:#a74870;color:#fff}
+.pwa-update-banner{position:fixed;z-index:1000;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(420px,calc(100vw - 28px));display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #ffffff38;border-radius:16px;background:#30243ef2;color:#fff;box-shadow:0 12px 40px #140d1f55;backdrop-filter:blur(16px)}
+.pwa-update-banner[hidden],.pwa-help[hidden]{display:none}
+.pwa-update-banner span{flex:1;font-size:13px}
+.pwa-update-banner button{border:0;border-radius:10px;background:#eac586;color:#30243e;min-height:38px;padding:0 12px;font-weight:800}
+.pwa-update-banner .pwa-dismiss{background:transparent;color:#fff;padding:0 4px}
+.pwa-help{position:fixed;z-index:1001;inset:0;display:grid;place-items:center;padding:20px;background:#160f20aa;backdrop-filter:blur(8px)}
+.pwa-help-card{width:min(420px,100%);padding:22px;border-radius:22px;background:#fff;color:#30243e;box-shadow:0 24px 60px #100a1e55}
+.pwa-help-card h2{margin:0 0 10px;font-size:20px}
+.pwa-help-card p,.pwa-help-card li{font-size:14px;line-height:1.75;color:#645c68}
+.pwa-help-card ol{padding-left:22px}
+.pwa-help-card button{width:100%;min-height:46px;border:0;border-radius:13px;background:#a74870;color:white;font-weight:800}
+@media(display-mode:standalone){.shell{display:block;min-height:100dvh;padding:0}.explain{display:none}.phone{width:100%;height:100dvh;min-height:100dvh;border:0;border-radius:0;box-shadow:none;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}}
+@media(prefers-reduced-motion:reduce){.pwa-update-banner,.pwa-help{scroll-behavior:auto}}

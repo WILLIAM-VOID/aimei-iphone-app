@@ -1,0 +1,150 @@
+/* 当日点亮后的其余皮肤：与月冕同级的北京页、礼遇页动态反馈。 */
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual{display:block}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i{left:var(--hx);top:var(--hy);width:7px;height:7px;opacity:0;animation:ritualHomeWander var(--hd) ease-in-out infinite;animation-delay:var(--ha)}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(1){--hx:12%;--hy:72%;--hd:9.1s;--ha:-2.1s;--side:15px;--lift:-29px}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(2){--hx:28%;--hy:48%;--hd:11.3s;--ha:-5.6s;--side:-19px;--lift:-22px}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(3){--hx:44%;--hy:82%;--hd:8.5s;--ha:-1.7s;--side:24px;--lift:-38px}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(4){--hx:61%;--hy:62%;--hd:10.7s;--ha:-7.2s;--side:-16px;--lift:-26px}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(5){--hx:78%;--hy:42%;--hd:12.2s;--ha:-4.3s;--side:19px;--lift:-21px}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(6){--hx:91%;--hy:78%;--hd:9.8s;--ha:-6.4s;--side:-13px;--lift:-34px}
+@keyframes ritualHomeWander{0%,100%{opacity:.1;transform:translate(0,8px) rotate(-10deg) scale(.6)}28%{opacity:.64;transform:translate(var(--side),-5px) rotate(14deg) scale(1)}52%{opacity:.18;transform:translate(0,-14px) rotate(-15deg) scale(.65)}76%{opacity:.52;transform:translate(var(--side),var(--lift)) rotate(30deg) scale(.95)}}
+
+/* 琉璃星轨：冷蓝星芒与弧形轨道。 */
+body.reward-ritual-star .reward-home-ritual:before{content:'';position:absolute;left:10%;top:30%;width:77%;height:67%;border-top:1px solid #a6edff8c;border-radius:50%;transform:rotate(-9deg);filter:drop-shadow(0 0 4px #76d9f2);animation:ritualOrbit 9s ease-in-out infinite}
+body.reward-ritual-star .reward-home-ritual i{background:#d8f9ff;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);filter:drop-shadow(0 0 3px #82d7ef)}
+/* 玫瑰圣殿：半透明光瓣与暖粉弧线。 */
+body.reward-ritual-rose .reward-home-ritual:before{content:'';position:absolute;left:17%;top:29%;width:61%;height:68%;border-top:1px solid #ffe5d8bd;border-radius:50%;transform:rotate(12deg);animation:ritualOrbit 11s ease-in-out infinite}
+body.reward-ritual-rose .reward-home-ritual i{width:9px;height:6px;background:#ffe9df;border-radius:90% 15% 75% 18%;filter:drop-shadow(0 0 3px #ffe5e2)}
+/* 云境日记：柔和薄荷微光与缓慢呼吸的云弧。 */
+body.reward-ritual-cloud .reward-home-ritual:before{content:'';position:absolute;left:11%;top:38%;width:76%;height:57%;border-top:2px solid #ffffffba;border-radius:50%;filter:blur(1px);animation:ritualOrbit 12s ease-in-out infinite}
+body.reward-ritual-cloud .reward-home-ritual i{width:5px;height:5px;background:#fffef1;border-radius:50%;filter:drop-shadow(0 0 5px #fff8de)}
+@keyframes ritualOrbit{0%,100%{opacity:.24;transform:translateX(-8px) rotate(-9deg)}50%{opacity:.68;transform:translateX(10px) rotate(4deg)}}
+
+/* 礼遇页统一使用稀疏粒子、光带与进度流光；每款有独立色彩和主徽章。 */
+body.reward-ritual-star{--ritual-color:#c4f3ff;--ritual-soft:#85e4fc24;--ritual-bright:#ccf8ff88;--ritual-shadow:#6fe7f9b8}
+body.reward-ritual-rose{--ritual-color:#ffe4e9;--ritual-soft:#ffe1ee2d;--ritual-bright:#fff1d696;--ritual-shadow:#ef9cbdab}
+body.reward-ritual-cloud{--ritual-color:#ffffff;--ritual-soft:#b8ead732;--ritual-bright:#ffffffa8;--ritual-shadow:#8bd5b4a6}
+body.reward-ritual-mirror{--ritual-color:#b2fff2;--ritual-soft:#6ae9da25;--ritual-bright:#b9fff395;--ritual-shadow:#43dfd3bc}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-moon-tide{display:block}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-moon-tide i{background:var(--ritual-color);filter:drop-shadow(0 0 4px var(--ritual-shadow));animation:ritualTideSpark var(--duration) ease-in-out infinite;animation-delay:var(--delay)}
+body.reward-ritual-rose #rewards .reward-moon-tide i{width:7px;height:5px;clip-path:none;border-radius:80% 20% 70% 15%}
+body.reward-ritual-cloud #rewards .reward-moon-tide i{width:4px;height:4px;clip-path:none;border-radius:50%}
+body.reward-ritual-mirror #rewards .reward-moon-tide i{clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero:before{content:'';position:absolute;inset:-20% -55%;z-index:0;pointer-events:none;background:linear-gradient(104deg,transparent 28%,var(--ritual-soft) 40%,var(--ritual-bright) 50%,var(--ritual-soft) 59%,transparent 70%);transform:translateX(-58%) rotate(-6deg);animation:ritualTideSweep 8s ease-in-out infinite}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-track-card:after{content:'';position:absolute;inset:-35% -55%;z-index:1;pointer-events:none;background:linear-gradient(102deg,transparent 35%,var(--ritual-soft) 44%,var(--ritual-bright) 51%,var(--ritual-soft) 59%,transparent 68%);transform:translateX(-58%) rotate(-5deg);animation:ritualTideSweep 9s ease-in-out infinite;animation-delay:1.2s}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-trail,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-nodes,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-track-foot{z-index:2}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-trail-fill{position:relative;overflow:hidden}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-trail-fill:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--ritual-bright),transparent);transform:translateX(-100%);animation:ritualTrailWave 6.2s ease-in-out infinite}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-node.today .orb{outline:1px solid var(--ritual-color);outline-offset:5px;animation:ritualOtherNode 3.4s ease-in-out infinite}
+@keyframes ritualOtherNode{0%,100%{box-shadow:0 0 10px 2px var(--ritual-shadow)}50%{box-shadow:0 0 24px 8px var(--ritual-shadow)}}
+
+/* 星轨：两圈蓝色轨道围绕核心慢速错位转动。 */
+body.reward-ritual-star #rewards .reward-hero-art{width:116px;height:116px;right:12px;top:19px;border:1px solid #a9ecff;border-radius:50%;background:radial-gradient(circle,#e5faff91 0,#7fcde454 33%,transparent 70%);color:#e8fbff;font-size:50px;box-shadow:0 0 28px #6bddf3a2;z-index:3;animation:ritualStarCore 5.5s ease-in-out infinite}
+body.reward-ritual-star #rewards .reward-hero-art:before,body.reward-ritual-star #rewards .reward-hero-art:after{content:'';position:absolute;inset:-11px;border:2px solid transparent;border-top-color:#c8f5ff;border-right-color:#c8f5ff;border-radius:50%;animation:ritualStarOrbit 9s linear infinite}
+body.reward-ritual-star #rewards .reward-hero-art:after{inset:-19px;border-top-color:#79cfff;border-right-color:transparent;border-bottom-color:#79cfff;animation-duration:14s;animation-direction:reverse;opacity:.56}
+@keyframes ritualStarCore{50%{box-shadow:0 0 42px #7beafa;transform:scale(1.07)}}
+@keyframes ritualStarOrbit{to{transform:rotate(360deg)}}
+
+/* 玫瑰：不规则花瓣轮廓开合，粉金晕光回应节点。 */
+body.reward-ritual-rose #rewards .reward-hero-art{width:112px;height:112px;right:13px;top:22px;border:1px solid #f4bed0;border-radius:46% 54% 58% 42%;background:radial-gradient(circle,#fff0ec,#efb8cc8c 50%,#cd6f9e55);color:#a74870;font-size:48px;box-shadow:0 0 25px #f3b7d0b5;z-index:3;animation:ritualRoseBloom 6.2s ease-in-out infinite}
+body.reward-ritual-rose #rewards .reward-hero-art:before,body.reward-ritual-rose #rewards .reward-hero-art:after{content:'';position:absolute;inset:-12px;border:2px solid #fff0d7a8;border-radius:38% 62% 42% 58%;animation:ritualRosePetal 8s ease-in-out infinite}
+body.reward-ritual-rose #rewards .reward-hero-art:after{inset:-21px;border-color:#fff0d65c;animation-delay:-3s;animation-direction:reverse}
+@keyframes ritualRoseBloom{50%{transform:scale(1.07) rotate(7deg);box-shadow:0 0 36px #f4a8c8d9}}
+@keyframes ritualRosePetal{50%{transform:rotate(38deg) scale(1.04);opacity:.58}}
+
+/* 云境：柔光呼吸与半透明云环。 */
+body.reward-ritual-cloud #rewards .reward-hero-art{width:113px;height:113px;right:12px;top:21px;border:1px solid #9fcfb9;border-radius:47% 53% 55% 45%;background:radial-gradient(circle,#ffffff 8%,#e3f6e9 60%,#b9e2cd);color:#478b70;font-size:44px;box-shadow:0 0 25px #8bd5b494;z-index:3;animation:ritualCloudBreathe 5.6s ease-in-out infinite}
+body.reward-ritual-cloud #rewards .reward-hero-art:before,body.reward-ritual-cloud #rewards .reward-hero-art:after{content:'';position:absolute;inset:-13px;border:2px solid #ffffffd1;border-radius:53% 47% 62% 38%;box-shadow:0 0 13px #8bd5b486;animation:ritualCloudRing 7s ease-in-out infinite}
+body.reward-ritual-cloud #rewards .reward-hero-art:after{inset:-23px;border-color:#d3ecdc9c;animation-delay:-2.3s}
+@keyframes ritualCloudBreathe{50%{transform:scale(1.07) rotate(-8deg);box-shadow:0 0 37px #85cdaaaf}}
+@keyframes ritualCloudRing{50%{transform:scale(1.07) rotate(12deg);opacity:.54}}
+
+/* 镜界：在现有菱形之上加入错位光框与快速扫光。 */
+body.reward-ritual-mirror #rewards .reward-hero-art{z-index:3;box-shadow:0 0 28px #4fe3d1b6,inset 0 0 23px #70ddd244;animation:ritualMirrorFrame 5.8s ease-in-out infinite}
+body.reward-ritual-mirror #rewards .reward-hero-art:before,body.reward-ritual-mirror #rewards .reward-hero-art:after{content:'';position:absolute;inset:-13px;border:1px solid #a3fff4;border-radius:22px;box-shadow:0 0 14px #70ddd2a6;animation:ritualMirrorOffset 7s ease-in-out infinite}
+body.reward-ritual-mirror #rewards .reward-hero-art:after{inset:-23px;border-color:#70ddd255;animation-delay:-2.8s;animation-direction:reverse}
+@keyframes ritualMirrorFrame{50%{box-shadow:0 0 42px #5aefe1d6,inset 0 0 31px #70ddd277}}
+@keyframes ritualMirrorOffset{50%{transform:rotate(17deg) scale(1.08);opacity:.46}}
+
+/* 浅色玫瑰底栏需要独立的深色次级文字。 */
+body.app-skin-rose:has(.screen.active) .home-nav button{color:#8e7d86}
+body.app-skin-rose:has(.screen.active) .home-nav button.active{color:#a74870}
+
+@media(prefers-reduced-motion:reduce){body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual:before,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero:before,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-track-card:after,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero-art,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero-art:before,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero-art:after,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-moon-tide i,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-trail-fill:after,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-node.today .orb{animation:none!important}}
+
+/* 四款非月冕皮肤增加约 30% 粒子，并与月冕保持同一动效位置。 */
+body.reward-ritual-moon .reward-home-ritual i:nth-child(n+7){display:none}
+body.reward-ritual-moon #rewards .reward-hero .reward-moon-tide i:nth-child(n+9),body.reward-ritual-moon #rewards .reward-track-card .reward-moon-tide i:nth-child(n+6){display:none}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(7){--hx:20%;--hy:27%;--hd:10.2s;--ha:-6.1s;--side:12px;--lift:-18px}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(8){--hx:72%;--hy:83%;--hd:11.7s;--ha:-3.8s;--side:-15px;--lift:-30px}
+body.reward-ritual-mirror .reward-home-ritual i:nth-child(7){left:24%;top:29%;animation-delay:2.4s}
+body.reward-ritual-mirror .reward-home-ritual i:nth-child(8){left:77%;top:83%;animation-delay:5.5s}
+body.reward-ritual-mirror .reward-home-ritual:before{content:'';position:absolute;left:10%;top:33%;width:72%;height:53%;border-top:1px solid #a3fff498;border-radius:50%;filter:drop-shadow(0 0 3px #70ddd2);animation:ritualOrbit 9.5s ease-in-out infinite}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual:after,body.reward-ritual-mirror .reward-home-ritual:after{content:'';position:absolute;left:30%;top:45%;width:48%;height:40%;border-bottom:1px solid var(--ritual-bright);border-radius:50%;opacity:.4;transform:rotate(-12deg);animation:ritualSecondaryArc 12s ease-in-out infinite;pointer-events:none}
+@keyframes ritualSecondaryArc{0%,100%{opacity:.16;transform:translate(-8px,3px) rotate(-15deg)}50%{opacity:.6;transform:translate(9px,-4px) rotate(-4deg)}}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-today-marker{display:block;border:1px solid var(--ritual-color);border-radius:50%;background:radial-gradient(circle,var(--ritual-color) 0 25%,transparent 34%);box-shadow:0 0 12px var(--ritual-shadow);animation:ritualOtherMarker 3s ease-in-out infinite}
+body.reward-ritual-star .reward-today-marker{clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:#c4f3ff;border:0}
+body.reward-ritual-rose .reward-today-marker{border-radius:42% 58% 43% 57%;background:#ffe4e9}
+body.reward-ritual-cloud .reward-today-marker{background:#fff;border-color:#8bd5b4}
+@keyframes ritualOtherMarker{0%,100%{opacity:.72;filter:drop-shadow(0 0 3px var(--ritual-shadow));transform:translate(-50%,-50%) scale(.8)}50%{opacity:1;filter:drop-shadow(0 0 9px var(--ritual-shadow));transform:translate(-50%,-50%) scale(1.18)}}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-moon-tide i{filter:drop-shadow(0 0 5px var(--ritual-shadow))}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero:before{animation-duration:6.5s}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-track-card:after{animation-duration:7.3s}
+@media(prefers-reduced-motion:reduce){body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) .reward-home-ritual:after,body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-today-marker{animation:none!important}}
+
+/* Existing motion is the unlit baseline. Today's completion reveals roughly 40% more particles. */
+body.reward-ritual-moon{--ritual-color:#ffe5ae;--ritual-bright:#ffe8b49c;--ritual-shadow:#f4c87b9a}
+body.reward-lit-today.reward-ritual-moon .reward-home-ritual i:nth-child(n+7),body.reward-lit-today.reward-ritual-moon #rewards .reward-hero .reward-moon-tide i:nth-child(n+9),body.reward-lit-today.reward-ritual-moon #rewards .reward-track-card .reward-moon-tide i:nth-child(n+6){display:block}
+body.reward-lit-today.reward-ritual-moon .reward-home-ritual i:nth-child(n+9),body.reward-lit-today.reward-ritual-moon #rewards .reward-hero .reward-moon-tide i:nth-child(n+18),body.reward-lit-today.reward-ritual-moon #rewards .reward-track-card .reward-moon-tide i:nth-child(n+12){display:none}
+body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror):not(.reward-lit-today) .reward-home-ritual i:nth-child(n+9),body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror):not(.reward-lit-today) #rewards .reward-hero .reward-moon-tide i:nth-child(n+12),body:is(.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror):not(.reward-lit-today) #rewards .reward-track-card .reward-moon-tide i:nth-child(n+8){display:none}
+body:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(9){--hx:37%;--hy:26%;--hd:9.4s;--ha:-4.6s;--side:-12px;--lift:-24px}
+body:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(10){--hx:56%;--hy:78%;--hd:12.8s;--ha:-8.1s;--side:19px;--lift:-33px}
+body:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud) .reward-home-ritual i:nth-child(11){--hx:86%;--hy:31%;--hd:10.9s;--ha:-2.8s;--side:-13px;--lift:-20px}
+body.reward-ritual-moon .reward-home-ritual i:nth-child(n+7){left:var(--hx);top:var(--hy);--delay:var(--ha);--duration:var(--hd)}
+body.reward-ritual-moon .reward-home-ritual i:nth-child(7){--hx:20%;--hy:29%;--hd:10.2s;--ha:-6.1s;--side:12px;--lift:-18px}
+body.reward-ritual-moon .reward-home-ritual i:nth-child(8){--hx:72%;--hy:83%;--hd:11.7s;--ha:-3.8s;--side:-15px;--lift:-30px}
+body.reward-ritual-mirror .reward-home-ritual i:nth-child(9){left:39%;top:24%;animation-delay:3.7s}
+body.reward-ritual-mirror .reward-home-ritual i:nth-child(10){left:58%;top:87%;animation-delay:6.1s}
+body.reward-ritual-mirror .reward-home-ritual i:nth-child(11){left:89%;top:46%;animation-delay:1.3s}
+body:not(.reward-lit-today) .reward-today-marker{display:none!important}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) .reward-home-ritual{filter:brightness(1.18) drop-shadow(0 0 5px var(--ritual-shadow))}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-moon-tide{filter:brightness(1.28)}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero-art{filter:brightness(1.15) drop-shadow(0 0 8px var(--ritual-shadow))}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-track-card{box-shadow:0 8px 30px var(--ritual-shadow)}
+@media(prefers-reduced-motion:reduce){body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) .reward-home-ritual,body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-moon-tide,body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero-art{filter:none}}
+
+/* 点亮后的可辨识状态：清晰的状态标签与局部光晕，基础态仍保留原有动效。 */
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #home .home-masthead{box-shadow:inset 0 -20px 30px -18px var(--ritual-shadow),0 3px 16px var(--ritual-shadow)}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #home .home-masthead:after{content:'✦ 今日已点亮 · 美神点已入账';position:relative;z-index:3;display:block;width:max-content;max-width:100%;margin:2px 0 5px auto;padding:4px 10px;border:1px solid var(--ritual-color);border-radius:99px;background:#271e3299;color:#fff;font-size:10px;font-weight:750;letter-spacing:.03em;box-shadow:0 0 13px var(--ritual-shadow);animation:ritualLitBadge 3.6s ease-in-out infinite}
+body.reward-lit-today.reward-ritual-cloud #home .home-masthead:after,body.reward-lit-today.reward-ritual-rose #home .home-masthead:after{background:#fff9;color:#70465d}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero{min-height:175px;padding-bottom:37px;border-color:var(--ritual-color);box-shadow:0 0 0 1px var(--ritual-bright),0 9px 29px var(--ritual-shadow)}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero:after{content:'✦ 今日已点亮';position:absolute;left:16px;bottom:11px;z-index:4;padding:4px 10px;border-radius:99px;border:1px solid var(--ritual-color);background:#332748c9;color:#fff;font-size:10px;font-weight:800;letter-spacing:.04em;box-shadow:0 0 12px var(--ritual-shadow);animation:ritualLitBadge 3.6s ease-in-out infinite}
+body.reward-lit-today.reward-ritual-cloud #rewards .reward-hero:after,body.reward-lit-today.reward-ritual-rose #rewards .reward-hero:after{background:#fffbe9e8;color:#784968}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-track-card{border-color:var(--ritual-color);box-shadow:0 0 0 1px var(--ritual-bright),0 8px 30px var(--ritual-shadow)}
+@keyframes ritualLitBadge{0%,100%{box-shadow:0 0 9px var(--ritual-shadow);transform:translateY(0)}50%{box-shadow:0 0 22px var(--ritual-shadow);transform:translateY(-2px)}}
+@media(prefers-reduced-motion:reduce){body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #home .home-masthead:after,body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero:after{animation:none}}
+
+/* 礼遇点亮后：主卡与进度卡的粒子约增加一半，状态栏也承接同色流光。 */
+#rewards .reward-status{position:relative;isolation:isolate;overflow:hidden}
+#rewards .reward-status>span:not(.reward-status-glints){position:relative;z-index:3}
+#rewards .reward-status-glints{display:none;position:absolute;inset:0;z-index:1;pointer-events:none}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-status-glints{display:block}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-status:before{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,transparent 18%,var(--ritual-bright) 48%,transparent 76%);transform:translateX(-110%);animation:ritualStatusSweep 6.8s ease-in-out infinite;pointer-events:none}
+.reward-status-glints i{position:absolute;top:var(--sy);left:var(--sx);width:5px;height:5px;background:var(--status-glint,var(--ritual-color));clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);filter:drop-shadow(0 0 3px var(--status-glint,var(--ritual-color)));opacity:0;animation:ritualStatusGlimmer var(--sd) ease-in-out infinite;animation-delay:var(--sa)}
+.reward-status-glints i:nth-child(1){--sx:25%;--sy:59%;--sd:5.2s;--sa:-1.4s;--dy:-5px}
+.reward-status-glints i:nth-child(2){--sx:38%;--sy:27%;--sd:7.1s;--sa:-4.1s;--dy:4px}
+.reward-status-glints i:nth-child(3){--sx:52%;--sy:65%;--sd:6.3s;--sa:-2.6s;--dy:-6px}
+.reward-status-glints i:nth-child(4){--sx:66%;--sy:35%;--sd:8.1s;--sa:-5.5s;--dy:3px}
+.reward-status-glints i:nth-child(5){--sx:76%;--sy:68%;--sd:5.8s;--sa:-3.7s;--dy:-4px}
+body.reward-ritual-rose #rewards{--status-glint:#f3a0c2}body.reward-ritual-cloud #rewards{--status-glint:#55aa87}
+body.reward-ritual-rose .reward-status-glints i{clip-path:none;border-radius:80% 20% 75% 20%;width:6px;height:4px}
+body.reward-ritual-cloud .reward-status-glints i{clip-path:none;border-radius:50%;width:4px;height:4px}
+body.reward-ritual-mirror .reward-status-glints i{clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+@keyframes ritualStatusSweep{0%,19%{opacity:.08;transform:translateX(-110%)}49%{opacity:.72}74%,100%{opacity:.07;transform:translateX(110%)}}
+@keyframes ritualStatusGlimmer{0%,100%{opacity:0;transform:translate(0,4px) scale(.45) rotate(-15deg)}36%{opacity:.82;transform:translate(7px,var(--dy)) scale(1.16) rotate(18deg)}65%{opacity:.12;transform:translate(-5px,calc(var(--dy) - 3px)) scale(.65) rotate(42deg)}}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-moon-tide i{filter:drop-shadow(0 0 7px var(--ritual-shadow));animation-name:ritualTideSparkLit}
+@keyframes ritualTideSparkLit{0%,100%{opacity:.08;transform:translate(0,6px) scale(.55)}39%{opacity:.78;transform:translate(0,var(--rise)) scale(1.16)}67%{opacity:.22;transform:translate(var(--drift),calc(var(--rise) - 5px)) scale(.7)}}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-hero-art{filter:brightness(1.35) drop-shadow(0 0 13px var(--ritual-shadow))}
+body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-node.today .orb{filter:drop-shadow(0 0 9px var(--ritual-shadow))}
+@media(prefers-reduced-motion:reduce){body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-status:before,body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-status-glints i,body.reward-lit-today:is(.reward-ritual-moon,.reward-ritual-star,.reward-ritual-rose,.reward-ritual-cloud,.reward-ritual-mirror) #rewards .reward-moon-tide i{animation:none!important}}

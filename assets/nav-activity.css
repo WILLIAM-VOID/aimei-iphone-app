@@ -1,0 +1,5 @@
+.home-nav [data-home-nav="rewards"]{position:relative}
+.home-nav .nav-alert-dot{position:absolute;top:10px;left:calc(50% + 11px);width:8px;height:8px;border-radius:50%;background:#ff4055;border:1px solid #fff;box-shadow:0 0 0 2px #ff405532,0 1px 5px #7c1b28a0;pointer-events:none}
+.home-nav .nav-alert-dot[hidden]{display:none!important}
+.home-nav #messagesUnreadCount{font-size:0!important;width:9px!important;height:9px!important;line-height:0!important;right:-5px!important;top:-1px!important;background:#ff4055!important;border:1px solid #fff;box-shadow:0 0 0 2px #ff405532}
+.home-nav #messagesUnreadCount[hidden]{display:none!important}

@@ -1,0 +1,6 @@
+.app-pull-refresh{position:absolute;top:35px;left:50%;z-index:100;display:flex;align-items:center;gap:7px;max-width:82%;padding:8px 13px;border-radius:22px;background:var(--chrome-surface,#fff);color:var(--chrome-accent,#a74870);border:1px solid var(--chrome-line,#e8d7df);box-shadow:0 7px 22px #1e152625;font-size:12px;font-weight:750;white-space:nowrap;pointer-events:none;opacity:0;transform:translate(-50%,-28px) scale(.94);transition:opacity .2s,transform .2s}
+.app-pull-refresh.visible{opacity:1;transform:translate(-50%,0) scale(1)}
+.app-pull-refresh .pull-refresh-icon{width:19px;height:19px;border-radius:50%;border:2px solid currentColor;display:grid;place-items:center;font-size:12px;line-height:1;transition:transform .15s}
+.app-pull-refresh.loading .pull-refresh-icon{border-top-color:transparent;animation:appPullSpin .7s linear infinite;font-size:0}
+@keyframes appPullSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.app-pull-refresh,.app-pull-refresh .pull-refresh-icon{transition:none}.app-pull-refresh.loading .pull-refresh-icon{animation:none;border-top-color:currentColor}}

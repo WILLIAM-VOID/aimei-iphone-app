@@ -1,0 +1,185 @@
+/* 五套美神路皮肤延伸到整套 App。真人照片、商品图和活动 banner 不加滤镜。 */
+body.app-skin-moon{--app-bg:#171629;--app-card:#2b2742;--app-card-alt:#352d4b;--app-ink:#fff7ea;--app-muted:#c8bed0;--app-line:#796782;--app-accent:#eac182;--app-accent-ink:#34273e;--app-glow:#d2a26a52;--app-deep:#211a38;--app-head:linear-gradient(135deg,#2e2344,#6a4663);--app-scene:radial-gradient(circle at 87% 19%,#7450789c,transparent 30%),radial-gradient(circle at 5% 58%,#3d356e8a,transparent 37%),linear-gradient(#1c1831,#151526)}
+body.app-skin-star{--app-bg:#0c2044;--app-card:#17365e;--app-card-alt:#234775;--app-ink:#f3fbff;--app-muted:#c0d7e6;--app-line:#527b9c;--app-accent:#62e8ec;--app-accent-ink:#113c55;--app-glow:#54bffc55;--app-deep:#0e2a53;--app-head:linear-gradient(135deg,#1b4d87,#6680c7);--app-scene:radial-gradient(circle at 84% 18%,#5878ce94,transparent 27%),radial-gradient(circle at 7% 60%,#2b7fa57c,transparent 35%),linear-gradient(#102d5a,#0a1c3b)}
+body.app-skin-rose{--app-bg:#fff2f5;--app-card:#fffafc;--app-card-alt:#f6dce6;--app-ink:#4b2e3f;--app-muted:#805e70;--app-line:#ddadbf;--app-accent:#a74870;--app-accent-ink:#fff;--app-glow:#d274a14b;--app-deep:#e6b9c9;--app-head:linear-gradient(135deg,#c97c9c,#e9aebc);--app-scene:radial-gradient(circle at 84% 20%,#f5c9dacf,transparent 28%),radial-gradient(circle at 4% 72%,#f7d8e0a8,transparent 34%),linear-gradient(#fff4f6,#f9e7ee)}
+body.app-skin-cloud{--app-bg:#eff8f5;--app-card:#ffffff;--app-card-alt:#e4f3eb;--app-ink:#25463f;--app-muted:#607b73;--app-line:#b8d9ca;--app-accent:#287f6e;--app-accent-ink:#fff;--app-glow:#8cc9aa62;--app-deep:#d0e9dd;--app-head:linear-gradient(135deg,#7cbca2,#d7e8be);--app-scene:radial-gradient(circle at 84% 20%,#bfe5d5d9,transparent 28%),radial-gradient(circle at 5% 71%,#e3efc9bb,transparent 35%),linear-gradient(#f2faf6,#eaf5ee)}
+body.app-skin-mirror{--app-bg:#0a1925;--app-card:#18313f;--app-card-alt:#234455;--app-ink:#edf9f9;--app-muted:#b2cbd0;--app-line:#4b7b87;--app-accent:#4bdccb;--app-accent-ink:#102e39;--app-glow:#49dfd05b;--app-deep:#102b38;--app-head:linear-gradient(135deg,#1b4752,#61415f);--app-scene:radial-gradient(circle at 85% 19%,#9f577d8c,transparent 26%),radial-gradient(circle at 4% 64%,#217f8880,transparent 34%),linear-gradient(#102533,#0b1726)}
+
+body[class*="app-skin-"]{background:var(--app-scene);color:var(--app-ink)}
+body[class*="app-skin-"] .phone{background:var(--app-bg);border-color:var(--app-deep);box-shadow:0 25px 75px var(--app-glow)}
+body[class*="app-skin-"] .content{background:var(--app-scene);color:var(--app-ink)}
+body[class*="app-skin-"] .status,body[class*="app-skin-"] .top{background:var(--app-bg);color:var(--app-ink)}
+body[class*="app-skin-"] .top small,body[class*="app-skin-"] .note,body[class*="app-skin-"] .tiny,body[class*="app-skin-"] .explain p{color:var(--app-muted)}
+body[class*="app-skin-"] .new-home{background:var(--app-scene);color:var(--app-ink)}
+body[class*="app-skin-"] .home-masthead,body[class*="app-skin-"] .detail-masthead{background:var(--app-head);color:var(--app-ink)}
+body[class*="app-skin-"] .home-search-sticky,body[class*="app-skin-"] .detail-search-sticky{background:var(--app-head)}
+body[class*="app-skin-"] .home-search,body[class*="app-skin-"] .home-cart,body[class*="app-skin-"] .detail-search-inline{background:var(--app-card);color:var(--app-ink);box-shadow:0 3px 15px var(--app-glow)}
+body[class*="app-skin-"] .home-search input,body[class*="app-skin-"] .detail-search-inline input{color:var(--app-ink);background:transparent}
+body[class*="app-skin-"] .home-search input::placeholder,body[class*="app-skin-"] .detail-search-inline input::placeholder{color:var(--app-muted)}
+body[class*="app-skin-"] .home-search button{background:var(--app-accent);color:var(--app-accent-ink)}
+body[class*="app-skin-"] .ai-wordmark,body[class*="app-skin-"] .head-heading h2{color:var(--app-ink)}
+body[class*="app-skin-"] .head-heading small{color:var(--app-accent)}
+body[class*="app-skin-"] .head-section{background:var(--app-scene)}
+body[class*="app-skin-"] .head-core,body[class*="app-skin-"] .home-observe{background:var(--app-card);border:1px solid var(--app-line);box-shadow:0 8px 26px var(--app-glow);color:var(--app-ink)}
+body[class*="app-skin-"] .head-demo,body[class*="app-skin-"] .head-foot,body[class*="app-skin-"] .facehint{color:var(--app-muted)}
+body[class*="app-skin-"] .head-foot button{background:var(--app-card-alt);color:var(--app-accent)}
+body[class*="app-skin-"] .head-mode,body[class*="app-skin-"] .mode{background:var(--app-card-alt);box-shadow:none}
+body[class*="app-skin-"] .head-mode button,body[class*="app-skin-"] .mode button{color:var(--app-muted)}
+body[class*="app-skin-"] .head-mode button.active,body[class*="app-skin-"] .mode button.active{background:var(--app-accent);color:var(--app-accent-ink)}
+body[class*="app-skin-"] .head-all,body[class*="app-skin-"] .allparts-link,body[class*="app-skin-"] .overview-tags button{background:var(--app-card-alt);color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .marker{background:var(--app-card);color:var(--app-ink);border-color:var(--app-accent);box-shadow:0 4px 17px var(--app-glow)}
+body[class*="app-skin-"] .marker b,body[class*="app-skin-"] .eyebrow{color:var(--app-accent)}
+body[class*="app-skin-"] .service-icon{background:var(--app-card-alt);border-color:var(--app-line);color:var(--app-ink)}
+body[class*="app-skin-"] .line-icon .accent{stroke:var(--app-accent)}
+body[class*="app-skin-"] .photo-window{box-shadow:0 10px 30px var(--app-glow)}
+body[class*="app-skin-"] .special-cards,body[class*="app-skin-"] .quick-services,body[class*="app-skin-"] .below-home,body[class*="app-skin-"] .ref-feed{background:transparent;color:var(--app-ink)}
+body[class*="app-skin-"] .special-card,body[class*="app-skin-"] .catalog-card{background:var(--app-card);border-color:var(--app-line);color:var(--app-ink);box-shadow:0 5px 17px var(--app-glow)}
+body[class*="app-skin-"] .quick-services button,body[class*="app-skin-"] .market-tabs button,body[class*="app-skin-"] .market-chips button{color:var(--app-ink)}
+body[class*="app-skin-"] .market-tabs,body[class*="app-skin-"] .market-tabs button{background:var(--app-card);border-color:var(--app-line)}
+body[class*="app-skin-"] .market-chips button{background:var(--app-card-alt)}
+body[class*="app-skin-"] .market-tabs button.active,body[class*="app-skin-"] .market-chips button.active{color:var(--app-accent)}
+body[class*="app-skin-"] .home-nav,body[class*="app-skin-"] .nav{background:var(--app-deep);border-color:var(--app-line)}
+body[class*="app-skin-"] .home-nav button,body[class*="app-skin-"] .nav button{background:transparent;color:var(--app-muted)}
+body[class*="app-skin-"] .home-nav button.active,body[class*="app-skin-"] .nav button.active{color:var(--app-accent)}
+
+body[class*="app-skin-"] .service-detail,body[class*="app-skin-"] .product-detail,body[class*="app-skin-"] .order-confirm{background:var(--app-scene);color:var(--app-ink)}
+body[class*="app-skin-"] .service-panel,body[class*="app-skin-"] .detail-tabs,body[class*="app-skin-"] .detail-hot-row,body[class*="app-skin-"] .detail-filterbar{background:var(--app-card);color:var(--app-ink)}
+body[class*="app-skin-"] .detail-special{background:var(--app-card-alt);color:var(--app-ink)}
+body[class*="app-skin-"] .special-pills button{background:var(--app-card);color:var(--app-ink);border:1px solid var(--app-line)}
+body[class*="app-skin-"] .special-card{color:var(--app-ink)}
+body[class*="app-skin-"] .detail-hot-row{background:var(--app-card-alt)}
+body[class*="app-skin-"] .detail-tabs button,body[class*="app-skin-"] .detail-filterbar button,body[class*="app-skin-"] .service-item,body[class*="app-skin-"] .service-page-note{color:var(--app-ink)}
+body[class*="app-skin-"] .service-filter-row button,body[class*="app-skin-"] .detail-hot-row button{background:var(--app-card-alt);color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .service-filter-row button.active,body[class*="app-skin-"] .detail-tabs button.active{color:var(--app-accent)}
+body[class*="app-skin-"] .catalog-copy,body[class*="app-skin-"] .catalog-copy h4{color:var(--app-ink)}
+body[class*="app-skin-"] .catalog-copy>p,body[class*="app-skin-"] .catalog-place,body[class*="app-skin-"] .catalog-copy dt{color:var(--app-muted)}
+body[class*="app-skin-"] .catalog-copy dd{color:var(--app-ink)}
+body[class*="app-skin-"] .catalog-copy summary{color:var(--app-accent)}
+body[class*="app-skin-"] .catalog-copy dl,body[class*="app-skin-"] .catalog-rank{background:var(--app-card-alt);color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .product-topbar,body[class*="app-skin-"] .product-anchor,body[class*="app-skin-"] .order-topbar,body[class*="app-skin-"] .order-bottom{background:var(--app-deep);color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .product-topbar button,body[class*="app-skin-"] .product-anchor button,body[class*="app-skin-"] .order-topbar button{color:var(--app-ink)}
+body[class*="app-skin-"] .hero-product-art{background:var(--app-head);color:var(--app-ink)}
+body[class*="app-skin-"] .hero-product-art small{border-color:var(--app-line)}
+body[class*="app-skin-"] .product-bottom{background:var(--app-deep);border-top:1px solid var(--app-line)}
+body[class*="app-skin-"] .bottom-cart{background:var(--app-deep)!important;color:var(--app-ink)!important}
+body[class*="app-skin-"] .product-price-panel>div:first-child button{color:var(--app-muted)}
+body[class*="app-skin-"] .product-search,body[class*="app-skin-"] .product-price-panel,body[class*="app-skin-"] .assurance-panel,body[class*="app-skin-"] .product-panel,body[class*="app-skin-"] .order-card{background:var(--app-card);color:var(--app-ink)}
+body[class*="app-skin-"] .product-search input,body[class*="app-skin-"] .quantity input{color:var(--app-ink);background:transparent}
+body[class*="app-skin-"] .product-price-panel h1,body[class*="app-skin-"] .product-panel h2,body[class*="app-skin-"] .clinic-info b,body[class*="app-skin-"] .order-card h2{color:var(--app-ink)}
+body[class*="app-skin-"] .assurance-panel p,body[class*="app-skin-"] .product-price-panel p,body[class*="app-skin-"] .clinic-info small,body[class*="app-skin-"] .spec-table,body[class*="app-skin-"] .order-card p{color:var(--app-muted)}
+body[class*="app-skin-"] .clinic-actions button,body[class*="app-skin-"] .doctor-pair>div,body[class*="app-skin-"] .spec-table{background:var(--app-card-alt);color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .clinic-row>button,body[class*="app-skin-"] .bottom-chat{background:var(--app-accent);color:var(--app-accent-ink)}
+body[class*="app-skin-"] .story-panel{background:var(--app-card-alt);color:var(--app-ink)}
+body[class*="app-skin-"] .order-product,body[class*="app-skin-"] .amount-row{border-color:var(--app-line)}
+body[class*="app-skin-"] .quantity{background:var(--app-card-alt);color:var(--app-ink)}
+body[class*="app-skin-"] .quantity button,body[class*="app-skin-"] .discount-row{color:var(--app-ink)}
+body[class*="app-skin-"] .amount-row p,body[class*="app-skin-"] .add-on h2 small{color:var(--app-muted)}
+
+body[class*="app-skin-"] .hero,body[class*="app-skin-"] .card,body[class*="app-skin-"] .analysis-card,body[class*="app-skin-"] .plan-card,body[class*="app-skin-"] .parts-drawer,body[class*="app-skin-"] .suggestion,body[class*="app-skin-"] .sheet-panel{background:var(--app-card);color:var(--app-ink);border-color:var(--app-line);box-shadow:0 7px 22px var(--app-glow)}
+body[class*="app-skin-"] .card p,body[class*="app-skin-"] .analysis-card p,body[class*="app-skin-"] .plan-card p,body[class*="app-skin-"] .suggestion p,body[class*="app-skin-"] .source-strip span{color:var(--app-muted)}
+body[class*="app-skin-"] .suggestion h4,body[class*="app-skin-"] .suggestion dd,body[class*="app-skin-"] .area-observation h3{color:var(--app-ink)}
+body[class*="app-skin-"] .suggestion dt,body[class*="app-skin-"] .area-kicker,body[class*="app-skin-"] .disclaimer-mini{color:var(--app-muted)}
+body[class*="app-skin-"] .suggestion .type,body[class*="app-skin-"] .area-observation .eyebrow{color:var(--app-accent)}
+body[class*="app-skin-"] .demo-badge{background:var(--app-card-alt);color:var(--app-ink)}
+body[class*="app-skin-"] .parts-drawer summary,body[class*="app-skin-"] .plan-step strong,body[class*="app-skin-"] .analysis-card summary{color:var(--app-accent)}
+body[class*="app-skin-"] .parts-grid button,body[class*="app-skin-"] .step,body[class*="app-skin-"] .compare>div,body[class*="app-skin-"] .source-strip span,body[class*="app-skin-"] .upload{background:var(--app-card-alt);color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .primary{background:var(--app-accent);color:var(--app-accent-ink)}
+body[class*="app-skin-"] .secondary,body[class*="app-skin-"] .round{background:var(--app-card);color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .pill{background:var(--app-card-alt);color:var(--app-accent)}
+body[class*="app-skin-"] .text,body[class*="app-skin-"] textarea,body[class*="app-skin-"] select{background:var(--app-card-alt);color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .field,body[class*="app-skin-"] .sectiontitle{color:var(--app-ink)}
+body[class*="app-skin-"] .home-part-sheet .sheet-panel{background:var(--app-card)}
+
+body[class*="app-skin-"] .my-screen{background:var(--app-scene);color:var(--app-ink)}
+body[class*="app-skin-"] .my-header span,body[class*="app-skin-"] .my-lead,body[class*="app-skin-"] .my-card p{color:var(--app-muted)}
+body[class*="app-skin-"] .my-card,body[class*="app-skin-"] .skin-choice{background:var(--app-card);color:var(--app-ink);border-color:var(--app-line);box-shadow:0 4px 15px var(--app-glow)}
+body[class*="app-skin-"] .skin-choice[aria-pressed="true"]{background:var(--app-card-alt);border:2px solid var(--app-accent)}
+body[class*="app-skin-"] .skin-choice small,body[class*="app-skin-"] .my-link span{color:var(--app-muted)}
+body[class*="app-skin-"] .skin-choice .selected,body[class*="app-skin-"] .my-current{color:var(--app-accent)}
+body[class*="app-skin-"] .my-current{background:var(--app-card-alt)}
+body[class*="app-skin-"] .my-primary{background:var(--app-accent);color:var(--app-accent-ink)}
+body[class*="app-skin-"] .my-link{color:var(--app-ink);border-color:var(--app-line)}
+body[class*="app-skin-"] .home-toast{background:var(--app-card-alt);color:var(--app-ink);border-color:var(--app-line)}
+
+@media(prefers-reduced-motion:reduce){body[class*="app-skin-"] *{scroll-behavior:auto!important}}
+
+/* 需求指定：礼遇与我的保留沉浸版，其余业务页用轻量品牌换肤。 */
+body.app-skin-moon:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)){--app-bg:#fff;--app-card:#fff;--app-card-alt:#f6f5f3;--app-ink:#30333a;--app-muted:#747984;--app-line:#e8e5e0;--app-accent:#9b7442;--app-accent-ink:#fff;--app-glow:#bc9a6a20;--app-deep:#fff;--app-head:linear-gradient(120deg,#f2e7d5,#fffaf1);--app-scene:linear-gradient(#fff,#fbfaf8)}
+body.app-skin-star:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)){--app-bg:#fff;--app-card:#fff;--app-card-alt:#f2f6fb;--app-ink:#29333d;--app-muted:#728091;--app-line:#e0e8f1;--app-accent:#477bb5;--app-accent-ink:#fff;--app-glow:#6c9dd51e;--app-deep:#fff;--app-head:linear-gradient(120deg,#e1effb,#f7fbff);--app-scene:linear-gradient(#fff,#f8fafc)}
+body.app-skin-rose:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)){--app-bg:#fff;--app-card:#fff;--app-card-alt:#fbf4f7;--app-ink:#3a3338;--app-muted:#81757e;--app-line:#eee3e8;--app-accent:#a74870;--app-accent-ink:#fff;--app-glow:#ca78941c;--app-deep:#fff;--app-head:linear-gradient(120deg,#f8e6ed,#fff8fa);--app-scene:linear-gradient(#fff,#fcf9fa)}
+body.app-skin-cloud:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)){--app-bg:#fff;--app-card:#fff;--app-card-alt:#f2f8f5;--app-ink:#303c38;--app-muted:#73817b;--app-line:#e0ebe5;--app-accent:#287f6e;--app-accent-ink:#fff;--app-glow:#71aa8a1c;--app-deep:#fff;--app-head:linear-gradient(120deg,#e4f3ec,#f7fbf8);--app-scene:linear-gradient(#fff,#f8fbf9)}
+body.app-skin-mirror:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)){--app-bg:#fff;--app-card:#fff;--app-card-alt:#f1f7f7;--app-ink:#29383a;--app-muted:#6e7f83;--app-line:#dfe9e9;--app-accent:#168c92;--app-accent-ink:#fff;--app-glow:#4eaaa41c;--app-deep:#fff;--app-head:linear-gradient(120deg,#dff2f1,#f7fbfb);--app-scene:linear-gradient(#fff,#f8fbfb)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .phone{border-color:#dfe4e7;box-shadow:0 20px 55px #22334414}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-masthead,body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .detail-masthead{background:var(--app-head);color:var(--app-ink)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-search-sticky,body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .detail-search-sticky{background:var(--app-head)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .hero-product-art{background:var(--app-head);color:var(--app-ink)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .catalog-rank{background:var(--app-card-alt);color:var(--app-ink);border-color:var(--app-line)}
+
+/* 首页固定外框跟随当前皮肤，缓和沉浸礼遇页与轻量业务页之间的色彩跳变。 */
+body.app-skin-moon{--chrome-top:linear-gradient(120deg,#302747,#55405f 58%,#382d50);--chrome-surface:#251f39;--chrome-ink:#fff9ec;--chrome-muted:#d3c7d8;--chrome-accent:#e7bd76;--chrome-nav:linear-gradient(110deg,#2b243f,#413452);--chrome-line:#ffffff22}
+body.app-skin-star{--chrome-top:linear-gradient(120deg,#193454,#32648a 58%,#254b72);--chrome-surface:#18344f;--chrome-ink:#f4fbff;--chrome-muted:#c3d9e8;--chrome-accent:#82d7ef;--chrome-nav:linear-gradient(110deg,#19334e,#294e70);--chrome-line:#ffffff26}
+body.app-skin-rose{--chrome-top:linear-gradient(120deg,#c97c9c,#b96588 58%,#a74870);--chrome-surface:#fff8fb;--chrome-ink:#fffafd;--chrome-muted:#f8e5ed;--chrome-accent:#a74870;--chrome-nav:#fff8fb;--chrome-line:#e9cbd7}
+body.app-skin-cloud{--chrome-top:linear-gradient(120deg,#d6eee3,#c2e4d5 58%,#b4ddca);--chrome-surface:#f8fcf9;--chrome-ink:#244c42;--chrome-muted:#55766c;--chrome-accent:#287f6e;--chrome-nav:#f8fcf9;--chrome-line:#d5e8dd}
+body.app-skin-mirror{--chrome-top:linear-gradient(120deg,#17494d,#1d6a6d 58%,#15575f);--chrome-surface:#143f43;--chrome-ink:#f1ffff;--chrome-muted:#b8d9d8;--chrome-accent:#70ddd2;--chrome-nav:linear-gradient(110deg,#163f43,#1c5c60);--chrome-line:#ffffff26}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-masthead{background:var(--chrome-top);color:var(--chrome-ink);transition:background .35s,color .25s}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-status,body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-location,body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-location b,body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-location .ai-wordmark{color:var(--chrome-ink)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-location .loc-divider{color:var(--chrome-muted)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-location .ai-wordmark b{color:var(--chrome-accent);text-shadow:none}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-search-sticky{background:var(--chrome-top);transition:background .35s}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-search{background:var(--chrome-surface);box-shadow:inset 0 0 0 1px var(--chrome-line),0 3px 12px #00000012}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-search .magnify{border-color:var(--chrome-muted)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-search .magnify:after{background:var(--chrome-muted)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-search input{color:var(--chrome-ink)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-search input::placeholder{color:var(--chrome-muted)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-search button{background:var(--chrome-accent);color:var(--app-accent-ink)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-cart{background:var(--chrome-surface);color:var(--chrome-ink);box-shadow:inset 0 0 0 1px var(--chrome-line)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-nav{background:var(--chrome-nav);border-color:var(--chrome-line);box-shadow:0 -8px 20px #00000010;transition:background .35s,border-color .25s}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-nav button{color:var(--chrome-muted)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-nav button.active{color:var(--chrome-accent)}
+body[class*="app-skin-"]:not(:has(#rewards.active)):not(:has(#my.active)):not(:has(#mySettings.active)):not(:has(#myPanel.active)) .home-nav button>span{color:inherit}
+
+/* 所有页面的底部导航与交易操作栏使用同一套皮肤外框色。 */
+body.app-skin-moon{--chrome-accent-ink:#34273e}
+body.app-skin-star{--chrome-accent-ink:#113c55}
+body.app-skin-rose,body.app-skin-cloud{--chrome-accent-ink:#fff}
+body.app-skin-mirror{--chrome-accent-ink:#102e39}
+/* 底栏图标在每一款皮肤下保持常亮，标签仍区分当前页面。 */
+body[class*="app-skin-"] .home-nav button>span,
+body[class*="app-skin-"] .nav button>span{color:var(--chrome-accent,var(--app-accent))!important;opacity:1!important;filter:drop-shadow(0 0 6px var(--app-glow))}
+body[class*="app-skin-"] .home-nav button.active>span,
+body[class*="app-skin-"] .nav button.active>span{filter:drop-shadow(0 0 10px var(--app-glow))}
+/* 桌面预览保留鼠标指针，方便操作和检查按钮。 */
+#home .home-city-button{border:0;background:transparent;color:inherit;padding:4px 2px;font-size:17px;font-weight:700;white-space:nowrap;min-height:42px}
+#home .home-city-button:focus-visible{outline:2px solid currentColor;outline-offset:2px;border-radius:7px}
+.home-nav #homeNavCity{display:block;font-size:11px;font-weight:inherit;line-height:1.5}
+.city-dialog{width:min(350px,calc(100vw - 32px));max-height:min(660px,82vh);border:1px solid var(--app-line,#e9d4df);border-radius:23px;padding:19px;background:var(--app-card,#fff);color:var(--app-ink,#352d35);box-shadow:0 24px 70px #1c162a55}
+.city-dialog::backdrop{background:#13151b94;backdrop-filter:blur(4px)}
+.city-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.city-dialog-head h3{margin:0;font-size:21px}
+.city-dialog-head button{width:36px;height:36px;border:0;border-radius:50%;background:var(--app-card-alt,#f8edf2);color:var(--app-ink,#352d35);font-size:24px}
+.city-dialog p{margin:5px 0 13px;color:var(--app-muted,#776b77);font-size:12px}
+.city-dialog .city-locate{width:100%;min-height:46px;border:0;border-radius:13px;background:var(--app-accent,#a74870);color:var(--app-accent-ink,#fff);font-weight:800}
+.city-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:17px 0;max-height:270px;overflow:auto}
+.city-options button{min-height:39px;border:1px solid var(--app-line,#e9d4df);border-radius:10px;background:var(--app-card-alt,#f8edf2);color:var(--app-ink,#352d35);font-size:12px}
+.city-options button.selected{border-color:var(--app-accent,#a74870);color:var(--app-accent,#a74870);font-weight:800}
+.city-custom{display:flex;gap:8px}.city-custom input{width:0;flex:1;min-height:42px;padding:0 12px;border:1px solid var(--app-line,#e9d4df);border-radius:11px;background:var(--app-card-alt,#f8edf2);color:var(--app-ink,#352d35)}
+.city-custom button{min-width:65px;border:0;border-radius:11px;background:var(--app-accent,#a74870);color:var(--app-accent-ink,#fff);font-weight:800}
+body[class*="app-skin-"]:has(.screen.active) .home-nav,
+body[class*="app-skin-"]:has(.screen.active) .nav,
+body[class*="app-skin-"]:has(.screen.active) .product-bottom,
+body[class*="app-skin-"]:has(.screen.active) .order-bottom{background:var(--chrome-nav);color:var(--chrome-ink);border-color:var(--chrome-line);box-shadow:0 -8px 20px #00000012}
+body[class*="app-skin-"]:has(.screen.active) .home-nav button,
+body[class*="app-skin-"]:has(.screen.active) .nav button{background:transparent;color:var(--chrome-muted)}
+body[class*="app-skin-"]:has(.screen.active) .home-nav button.active,
+body[class*="app-skin-"]:has(.screen.active) .nav button.active{color:var(--chrome-accent)}
+body[class*="app-skin-"]:has(.screen.active) .bottom-cart{background:transparent!important;color:var(--chrome-ink)!important}
+body[class*="app-skin-"]:has(.screen.active) .bottom-chat{background:var(--chrome-surface);color:var(--chrome-ink)}
+body[class*="app-skin-"]:has(.screen.active) .bottom-buy,
+body[class*="app-skin-"]:has(.screen.active) .order-bottom button{background:var(--chrome-accent);color:var(--chrome-accent-ink)}
+body[class*="app-skin-"]:has(.screen.active) .order-bottom b,
+body[class*="app-skin-"]:has(.screen.active) .order-bottom small{color:var(--chrome-accent)}
+/* 未选中项目仍保持图标与文字常亮，当前页增加底部光线提示。 */
+body[class*="app-skin-"] .home-nav button,body[class*="app-skin-"] .nav button,
+body[class*="app-skin-"]:has(.screen.active) .home-nav button,body[class*="app-skin-"]:has(.screen.active) .nav button{color:var(--chrome-accent,var(--app-accent))!important;opacity:1!important}
+body[class*="app-skin-"] .home-nav button>span,body[class*="app-skin-"] .nav button>span{color:inherit!important;filter:drop-shadow(0 0 6px var(--app-glow))}
+body[class*="app-skin-"] .home-nav button.active,body[class*="app-skin-"] .nav button.active{font-weight:850;text-shadow:0 0 9px var(--app-glow)}

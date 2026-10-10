@@ -1,0 +1,19 @@
+(function(){
+  const phone=document.querySelector('.phone'),content=document.querySelector('.content');if(!phone||!content)return;
+  const hint=document.createElement('div');hint.className='app-pull-refresh';hint.setAttribute('role','status');hint.setAttribute('aria-live','polite');hint.innerHTML='<span class="pull-refresh-icon">↓</span><span class="pull-refresh-label">下拉刷新</span>';phone.appendChild(hint);
+  const label=hint.querySelector('.pull-refresh-label'),icon=hint.querySelector('.pull-refresh-icon');
+  let start=null,pull=0,busy=false,hideTimer;
+  function active(){return content.querySelector('.screen.active')}
+  function scrollContainer(target){let node=target instanceof Element?target:null;while(node&&node!==phone){const style=getComputedStyle(node);if((style.overflowY==='auto'||style.overflowY==='scroll')&&node.scrollHeight>node.clientHeight+2)return node;if(node===content)break;node=node.parentElement}return content}
+  function startPull(x,y,target,isMouse){if(busy||!active()||target.closest?.('.home-nav,.nav,.fresh-dialog.open,.fresh-share-backdrop.open,[role="dialog"],input,textarea,select'))return;if(isMouse&&target.closest?.('button,a,label'))return;const scroll=scrollContainer(target);if(scroll.scrollTop>1)return;start={x,y,scroll};pull=0;clearTimeout(hideTimer)}
+  function movePull(x,y,event){if(!start||busy)return;const dx=x-start.x,dy=y-start.y;if(dy<8||Math.abs(dx)>dy*.75)return;if(start.scroll.scrollTop>1){start=null;return}pull=Math.min(110,dy*.64);hint.classList.add('visible');label.textContent=pull>=70?'松开刷新':'下拉刷新';icon.style.transform=`rotate(${Math.min(180,pull*2)}deg)`;if(event?.cancelable)event.preventDefault()}
+  function endPull(){if(!start)return;start=null;if(pull>=70){refresh()}else{hint.classList.remove('visible');icon.style.transform=''}pull=0}
+  function refresh(){if(busy)return;busy=true;hint.classList.add('visible','loading');label.textContent='正在更新';const id=active()?.id;try{if(['home','area','timeline'].includes(id)&&typeof window.render==='function')window.render();if(id==='rewards'&&typeof window.renderRewards==='function')window.renderRewards();if(id==='my'&&typeof window.renderMyDashboard==='function')window.renderMyDashboard();if(id==='messages'&&typeof window.renderMessages==='function')window.renderMessages();if(id==='myPanel'&&typeof window.renderMyPanel==='function')window.renderMyPanel();document.dispatchEvent(new CustomEvent('app:pull-refresh',{detail:{screen:id}}))}catch(error){console.warn('本机页面刷新失败',error)}setTimeout(()=>{hint.classList.remove('loading');label.textContent='已更新本机内容';icon.textContent='✓';hideTimer=setTimeout(()=>{hint.classList.remove('visible');icon.textContent='↓';icon.style.transform='';busy=false},950)},450)}
+  phone.addEventListener('touchstart',event=>{if(event.touches.length!==1)return;const touch=event.touches[0];startPull(touch.clientX,touch.clientY,event.target,false)},{passive:true});
+  phone.addEventListener('touchmove',event=>{if(!start||event.touches.length!==1)return;const touch=event.touches[0];movePull(touch.clientX,touch.clientY,event)},{passive:false});
+  phone.addEventListener('touchend',endPull,{passive:true});phone.addEventListener('touchcancel',()=>{start=null;hint.classList.remove('visible')},{passive:true});
+  phone.addEventListener('mousedown',event=>{if(event.button===0)startPull(event.clientX,event.clientY,event.target,true)});
+  window.addEventListener('mousemove',event=>{if(start&&event.buttons===1)movePull(event.clientX,event.clientY,event)});
+  window.addEventListener('mouseup',endPull);
+  window.addEventListener('blur',()=>{start=null;hint.classList.remove('visible')});
+})();
