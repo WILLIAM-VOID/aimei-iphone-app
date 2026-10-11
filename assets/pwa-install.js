@@ -1,12 +1,12 @@
 (function(){
-  const VERSION='0.2.3';
-  const BUILD='2026.10.11.2';
+  const VERSION='0.2.4';
+  const BUILD='2026.10.11.3';
   const isStandalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
   const statusText=document.createElement('p');statusText.className='pwa-install-status';statusText.id='pwaInstallStatus';statusText.textContent=`网页安装版 · v${VERSION}`;
   const settings=document.querySelector('#mySettings .myx-settings-body');
   if(settings){
     const card=document.createElement('section');card.className='pwa-install-card';card.innerHTML='<h3>手机版安装与更新</h3><div class="pwa-install-actions"><button class="primary" type="button" id="pwaInstallHelp">查看安装方法</button><button type="button" id="pwaCheckUpdate">检查更新</button></div>';
-    card.append(statusText);settings.append(card);
+    const replay=document.createElement('button');replay.type='button';replay.textContent='预览开屏动画';replay.className='pwa-splash-preview';replay.addEventListener('click',()=>window.replayAppSplash?.());card.append(statusText,replay);settings.append(card);
   }
   const help=document.createElement('div');help.className='pwa-help';help.hidden=true;help.innerHTML='<section class="pwa-help-card" role="dialog" aria-modal="true" aria-labelledby="pwaHelpTitle"><h2 id="pwaHelpTitle">添加到手机主屏幕</h2><p><b>iPhone：</b>用 Safari 打开，点“分享”→“添加到主屏幕”。</p><p><b>安卓：</b>用 Chrome 打开，点右上角菜单→“安装应用”或“添加到主屏幕”。</p><p>以后无需重新安装。打开、回到前台或在页面顶部下拉，都会检查线上新版本。</p><button type="button" id="pwaHelpClose">知道了</button></section>';
   document.body.append(help);
